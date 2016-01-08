@@ -1,0 +1,13 @@
+---
+first_name: Andreas
+last_name: Qvenild
+roles:
+  - admin
+email: andreas.qvenild@nrk.no
+password: ""
+_uid: 2G5kC65608f59b06d9ebNvt8Vnw
+password_hash: $2a$08$ginb.4ltioz/cHSFQJovPe3Z83ddjbQhqM3qh//HfFTotbqz0i/f.
+---
+Have no fears, your password, while plain text to start, will be encrypted upon first login. If ever you need to manually reset a password you can wipe out the password fields and start anew.
+
+Your username is the name of the YAML file. That would make this user "admin".

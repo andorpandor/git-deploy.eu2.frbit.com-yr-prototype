@@ -1,0 +1,25 @@
+title: Day Page
+
+fields:
+
+  temperaturemin:
+    type: text
+    display: Minimumstemperatur
+
+  temperaturemax:
+    type: text
+    display: Maksimumstemperatur
+
+  rain:
+    type: text
+    display: Nedbør
+
+  wind:
+    type: text
+    display: Vind
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: markitup

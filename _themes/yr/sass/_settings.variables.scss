@@ -1,0 +1,27 @@
+// Spacing
+
+$spacing--xs:       8px;
+$spacing--sm:       16px;
+$spacing:           24px;
+$spacing--md:       32px;
+$spacing--lg:       40px;
+$spacing--xl:       64px;
+
+//opacity
+$opacity:         0.10;
+
+//radius
+$radius:          2px;
+
+//transitions
+$transition:     0.6s;
+
+
+@mixin active{
+  background: $grey--light;
+}
+
+
+@mixin box-shadow{
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,$opacity);
+}

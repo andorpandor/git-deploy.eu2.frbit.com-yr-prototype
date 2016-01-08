@@ -1,0 +1,66 @@
+// Footer styles
+
+.header-place{
+    position: relative;
+    background: $grey--darker;
+    margin: 0;
+    &__head{
+      padding: $spacing $spacing--sm 1px $spacing--sm;
+    }
+    &__title{
+      color: $white;
+      margin-bottom: $spacing--xs/2;
+      font-size: $h3-size;
+      font-weight: normal;
+    }
+    &__metadata{
+      margin-bottom: $spacing--sm;
+    }
+    &__location{
+      color: $grey--mediumlight;
+      font-size: $h6-size;
+    }
+    &__elevation{
+      color: $grey--mediumlight;
+      font-size: $h6-size;
+    }
+    &__favourite{
+      float: right;
+      position: absolute;
+      top: 24px;
+      right: 20px;
+      display: block;
+      line-height: 1000px;
+      overflow: hidden;
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background: url("../gfx/icon-favourite.svg") no-repeat $grey--dark;
+      &:hover{
+        background-color: $blue;
+      }
+      &:active, :focus{
+        background: url("../gfx/icon-favourite.svg") no-repeat $blue--light;
+      }
+    }
+    &__nav{
+      padding: $spacing--sm/1.5;
+      background: $grey--dark;
+      margin-bottom: $spacing--xs;
+      text-align: center;
+    }
+    &__list-link{
+      display: inline;
+      color: $white;
+      text-decoration: none;
+      padding: 0;
+      &--current{
+        font-weight: bold;
+        color: $blue--light;
+
+      }
+      &:hover{
+        color: $blue--light;
+      }
+    }
+    }

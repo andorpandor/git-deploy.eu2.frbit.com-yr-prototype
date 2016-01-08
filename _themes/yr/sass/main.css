@@ -1,0 +1,2810 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    INUIT.CSS
+\*------------------------------------*/
+/*!*
+ *
+ * inuitcss.com -- @inuitcss -- @csswizardry
+ *
+ */
+/**
+ * inuit.css acts as a base stylesheet which you should extend with your own
+ * theme stylesheet.
+ *
+ * inuit.css aims to do the heavy lifting; sorting objects and abstractions,
+ * design patterns and fiddly bits of CSS, whilst leaving as much design as
+ * possible to you. inuit.css is the scaffolding to your decorator.
+ *
+ * This stylesheet is heavily documented and contains lots of comments, please
+ * take care to read and refer to them as you build. For further support please
+ * tweet at @inuitcss.
+ *
+ * Owing to the amount of comments please only ever use minified CSS in
+ * production. This file is purely a dev document.
+ *
+ * The table of contents below maps to section titles of the same name, to jump
+ * to any section simply run a find for $[SECTION-TITLE].
+ *
+ * Most objects and abstractions come with a chunk of markup that you should be
+ * able to paste into any view to quickly see how the CSS works in conjunction
+ * with the correct HTML.
+ *
+ * inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines
+ *
+ * LICENSE
+ *
+ * Copyright 2013 Harry Roberts
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Thank you for choosing inuit.css. May your web fonts render perfectly.
+ */
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS............You’re reading it!
+ * WARNING.............Here be dragons!
+ * IMPORTS.............Begin importing the sections below
+ *
+ * MIXINS..............Super-simple Sass stuff
+ * NORMALIZE...........normalize.css
+ * RESET...............Set some defaults
+ * CLEARFIX............
+ * SHARED..............Shared declarations
+ *
+ * MAIN................High-level elements like `html`, `body`, etc.
+ * HEADINGS............Double-stranded heading hierarchy
+ * PARAGRAPHS..........
+ * SMALLPRINT..........Smaller text elements like `small`
+ * QUOTES..............
+ * CODE................
+ * LISTS...............
+ * IMAGES..............
+ * TABLES..............
+ * FORMS...............
+ *
+ * GRIDS...............Fluid, proportional and nestable grids
+ * FLEXBOX.............Crudely emulate flexbox
+ * COLUMNS.............CSS3 columns
+ * NAV.................A simple abstraction to put a list in horizontal nav mode
+ * OPTIONS.............Grouped nav items
+ * PAGINATION..........Very stripped back, basic paginator
+ * BREADCRUMB..........Simple breadcrumb trail object
+ * MEDIA...............Media object
+ * MARGINALIA..........Simple marginalia content
+ * ISLAND..............Boxed off content
+ * BLOCK-LIST..........Blocky lists of content
+ * MATRIX..............Gridded lists
+ * SPLIT...............A simple split-in-two object
+ * THIS-OR-THIS........Options object
+ * LINK-COMPLEX........
+ * FLYOUT..............Flyout-on-hover object
+ * ARROWS..............CSS arrows
+ * SPRITE..............Generic spriting element
+ * ICON-TEXT...........Icon and text couplings
+ * BEAUTONS............Use the beautons micro library
+ * LOZENGES............Basic lozenge styles
+ * RULES...............Horizontal rules
+ * STATS...............Simple stats object
+ * GREYBOX.............Wireframing styles
+ *
+ * WIDTHS..............Width classes for use alongside the grid system etc.
+ * PUSH................Push classes for manipulating grids
+ * PULL................Pull classes for manipulating grids
+ * BRAND...............Helper class to apply brand treatment to elements
+ * HELPER..............A series of helper classes to use arbitrarily
+ * DEBUG...............Enable to add visual flags for debugging purposes
+ */
+/*------------------------------------*\
+    $WARNING
+\*------------------------------------*/
+/*
+ * inuit.css, being an OO framework, works in keeping with the open/closed
+ * principle. The variables you set previously are now being used throughout
+ * inuit.css to style everything we need for a base. Any custom styles SHOULD
+ * NOT be added or modified in inuit.css directly, but added via your theme
+ * stylesheet as per the open/closed principle:
+ *
+ * csswizardry.com/2012/06/the-open-closed-principle-applied-to-css
+ *
+ * Try not to edit any CSS beyond this point; if you find you need to do so
+ * it is a failing of the framework so please tweet at @inuitcss.
+ */
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/**
+ * Generic utility styles etc.
+ */
+/*------------------------------------*\
+    $DEFAULTS
+\*------------------------------------*/
+/**
+ * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
+ * in the inuit.css-web-template) to override them.
+ */
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+/**
+ * Base font-family.
+ */
+/**
+ * Default colour for objects’ borders etc.
+ */
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsiveness?
+ */
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you
+ * definitely need them.
+ */
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
+/**
+ * Note: `$pull` variable above must be set to true before enabling these.
+ */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * English quote marks?
+ */
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * How big would you like round corners to be by default?
+ */
+/*------------------------------------*\
+    $OBJECTS AND ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * Which objects and abstractions would you like to use?
+ */
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+/**
+ * Style any number of headings in one fell swoop, e.g.:
+ *
+   .foo{
+       @include headings(1, 3){
+           color:#BADA55;
+       }
+    }
+ *
+ * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+ * @thierrylemoulec for refining and improving my initial mixin.
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ *
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+   `@include truncate(100%);`
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/*
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * The usual...
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title], dfn[title] {
+  cursor: help; }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u, ins {
+  text-decoration: none; }
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid; }
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+img {
+  font-style: italic; }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*------------------------------------*\
+    $SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned, this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/**
+ * Base elements
+ */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre,
+.media,
+.island,
+.islet {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
+  ul, .islet ol, .islet dl, .islet
+  blockquote, .islet p, .islet address, .islet
+  table, .islet
+  fieldset, .islet figure, .islet
+  pre, .islet
+  .media, .islet
+  .island, .islet
+  .islet {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem; }
+
+/**
+ * Doubled up `margin-bottom` helper class.
+ */
+.landmark {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+
+/**
+ * `hr` elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+hr {
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+p, li {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+h1, h2, h3, h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+/**
+ * Base styles; unclassed HTML elements etc.
+ */
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html {
+  font: 1em/1.5 sans-serif;
+  overflow-y: scroll;
+  min-height: 100%;
+  background: #F5F5F5; }
+
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1, .alpha {
+  font-size: 42px;
+  font-size: 2.625rem;
+  line-height: 1.14286; }
+
+h2, .beta {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.77778; }
+
+h3, .gamma {
+  font-size: 23px;
+  font-size: 1.4375rem;
+  line-height: 1.04348; }
+
+h4, .delta {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.26316; }
+
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+/**
+ * Heading groups and generic any-heading class.
+ * To target any heading of any level simply apply a class of `.hN`, e.g.:
+ *
+   <hgroup>
+       <h1 class=hN>inuit.css</h1>
+       <h2 class=hN>Best. Framework. Ever!</h2>
+   </hgroup>
+ *
+ */
+hgroup .hN {
+  margin-bottom: 0; }
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+.giga {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1; }
+
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  line-height: 1; }
+
+.kilo {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+/*------------------------------------*\
+    $PARAGRAPHS
+\*------------------------------------*/
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger.
+ */
+.lede,
+.lead {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Have a numbered `ul` without the semantics implied by using an `ol`.
+ */
+/*ul*/
+.numbered-list {
+  list-style-type: decimal; }
+
+/**
+ * Objects and abstractions
+ */
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+.grid {
+  letter-spacing: -0.31em; }
+
+/* Opera hack */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em; }
+
+.grid__item {
+  letter-spacing: normal;
+  word-spacing: normal; }
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+.grid {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -24px;
+  /* [3] */ }
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.grid__item {
+  display: inline-block;
+  /* [1] */
+  padding-left: 24px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */ }
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.grid--rev {
+  direction: rtl;
+  text-align: left; }
+  .grid--rev > .grid__item {
+    direction: ltr;
+    text-align: left; }
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+.grid--full {
+  margin-left: 0; }
+  .grid--full > .grid__item {
+    padding-left: 0; }
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+.grid--right {
+  text-align: right; }
+  .grid--right > .grid__item {
+    text-align: left; }
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.grid--center {
+  text-align: center; }
+  .grid--center > .grid__item {
+    text-align: left; }
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+.grid--middle > .grid__item {
+  vertical-align: middle; }
+
+.grid--bottom > .grid__item {
+  vertical-align: bottom; }
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+.grid--narrow {
+  margin-left: -12px; }
+  .grid--narrow > .grid__item {
+    padding-left: 12px; }
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+.grid--wide {
+  margin-left: -48px; }
+  .grid--wide > .grid__item {
+    padding-left: 48px; }
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+/**
+ * Our regular, non-responsive width classes.
+ */
+/**
+ * Whole
+ */
+.one-whole {
+  width: 100%; }
+
+/**
+ * Halves
+ */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+/**
+ * Thirds
+ */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+/**
+ * Quarters
+ */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+/**
+ * Fifths
+ */
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+/**
+ * Sixths
+ */
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+/**
+ * Eighths
+ */
+.one-eighth {
+  width: 12.5%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+ * Tenths
+ */
+.one-tenth {
+  width: 10%; }
+
+.three-tenths {
+  width: 30%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.nine-tenths {
+  width: 90%; }
+
+/**
+ * Twelfths
+ */
+.one-twelfth {
+  width: 8.333%; }
+
+.five-twelfths {
+  width: 41.666%; }
+
+.seven-twelfths {
+  width: 58.333%; }
+
+.eleven-twelfths {
+  width: 91.666%; }
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+@media only screen and (max-width: 480px) {
+  /**
+   * Whole
+   */
+  .palm--one-whole {
+    width: 100%; }
+
+  /**
+   * Halves
+   */
+  .palm--one-half, .palm--two-quarters, .palm--three-sixths, .palm--four-eighths, .palm--five-tenths, .palm--six-twelfths {
+    width: 50%; }
+
+  /**
+   * Thirds
+   */
+  .palm--one-third, .palm--two-sixths, .palm--four-twelfths {
+    width: 33.333%; }
+
+  .palm--two-thirds, .palm--four-sixths, .palm--eight-twelfths {
+    width: 66.666%; }
+
+  /**
+   * Quarters
+   */
+  .palm--one-quarter, .palm--two-eighths, .palm--three-twelfths {
+    width: 25%; }
+
+  .palm--three-quarters, .palm--six-eighths, .palm--nine-twelfths {
+    width: 75%; }
+
+  /**
+   * Fifths
+   */
+  .palm--one-fifth, .palm--two-tenths {
+    width: 20%; }
+
+  .palm--two-fifths, .palm--four-tenths {
+    width: 40%; }
+
+  .palm--three-fifths, .palm--six-tenths {
+    width: 60%; }
+
+  .palm--four-fifths, .palm--eight-tenths {
+    width: 80%; }
+
+  /**
+   * Sixths
+   */
+  .palm--one-sixth, .palm--two-twelfths {
+    width: 16.666%; }
+
+  .palm--five-sixths, .palm--ten-twelfths {
+    width: 83.333%; }
+
+  /**
+   * Eighths
+   */
+  .palm--one-eighth {
+    width: 12.5%; }
+
+  .palm--three-eighths {
+    width: 37.5%; }
+
+  .palm--five-eighths {
+    width: 62.5%; }
+
+  .palm--seven-eighths {
+    width: 87.5%; }
+
+  /**
+   * Tenths
+   */
+  .palm--one-tenth {
+    width: 10%; }
+
+  .palm--three-tenths {
+    width: 30%; }
+
+  .palm--seven-tenths {
+    width: 70%; }
+
+  .palm--nine-tenths {
+    width: 90%; }
+
+  /**
+   * Twelfths
+   */
+  .palm--one-twelfth {
+    width: 8.333%; }
+
+  .palm--five-twelfths {
+    width: 41.666%; }
+
+  .palm--seven-twelfths {
+    width: 58.333%; }
+
+  .palm--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  .lap--one-whole {
+    width: 100%; }
+
+  /**
+   * Halves
+   */
+  .lap--one-half, .lap--two-quarters, .lap--three-sixths, .lap--four-eighths, .lap--five-tenths, .lap--six-twelfths {
+    width: 50%; }
+
+  /**
+   * Thirds
+   */
+  .lap--one-third, .lap--two-sixths, .lap--four-twelfths {
+    width: 33.333%; }
+
+  .lap--two-thirds, .lap--four-sixths, .lap--eight-twelfths {
+    width: 66.666%; }
+
+  /**
+   * Quarters
+   */
+  .lap--one-quarter, .lap--two-eighths, .lap--three-twelfths {
+    width: 25%; }
+
+  .lap--three-quarters, .lap--six-eighths, .lap--nine-twelfths {
+    width: 75%; }
+
+  /**
+   * Fifths
+   */
+  .lap--one-fifth, .lap--two-tenths {
+    width: 20%; }
+
+  .lap--two-fifths, .lap--four-tenths {
+    width: 40%; }
+
+  .lap--three-fifths, .lap--six-tenths {
+    width: 60%; }
+
+  .lap--four-fifths, .lap--eight-tenths {
+    width: 80%; }
+
+  /**
+   * Sixths
+   */
+  .lap--one-sixth, .lap--two-twelfths {
+    width: 16.666%; }
+
+  .lap--five-sixths, .lap--ten-twelfths {
+    width: 83.333%; }
+
+  /**
+   * Eighths
+   */
+  .lap--one-eighth {
+    width: 12.5%; }
+
+  .lap--three-eighths {
+    width: 37.5%; }
+
+  .lap--five-eighths {
+    width: 62.5%; }
+
+  .lap--seven-eighths {
+    width: 87.5%; }
+
+  /**
+   * Tenths
+   */
+  .lap--one-tenth {
+    width: 10%; }
+
+  .lap--three-tenths {
+    width: 30%; }
+
+  .lap--seven-tenths {
+    width: 70%; }
+
+  .lap--nine-tenths {
+    width: 90%; }
+
+  /**
+   * Twelfths
+   */
+  .lap--one-twelfth {
+    width: 8.333%; }
+
+  .lap--five-twelfths {
+    width: 41.666%; }
+
+  .lap--seven-twelfths {
+    width: 58.333%; }
+
+  .lap--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  .portable--one-whole {
+    width: 100%; }
+
+  /**
+   * Halves
+   */
+  .portable--one-half, .portable--two-quarters, .portable--three-sixths, .portable--four-eighths, .portable--five-tenths, .portable--six-twelfths {
+    width: 50%; }
+
+  /**
+   * Thirds
+   */
+  .portable--one-third, .portable--two-sixths, .portable--four-twelfths {
+    width: 33.333%; }
+
+  .portable--two-thirds, .portable--four-sixths, .portable--eight-twelfths {
+    width: 66.666%; }
+
+  /**
+   * Quarters
+   */
+  .portable--one-quarter, .portable--two-eighths, .portable--three-twelfths {
+    width: 25%; }
+
+  .portable--three-quarters, .portable--six-eighths, .portable--nine-twelfths {
+    width: 75%; }
+
+  /**
+   * Fifths
+   */
+  .portable--one-fifth, .portable--two-tenths {
+    width: 20%; }
+
+  .portable--two-fifths, .portable--four-tenths {
+    width: 40%; }
+
+  .portable--three-fifths, .portable--six-tenths {
+    width: 60%; }
+
+  .portable--four-fifths, .portable--eight-tenths {
+    width: 80%; }
+
+  /**
+   * Sixths
+   */
+  .portable--one-sixth, .portable--two-twelfths {
+    width: 16.666%; }
+
+  .portable--five-sixths, .portable--ten-twelfths {
+    width: 83.333%; }
+
+  /**
+   * Eighths
+   */
+  .portable--one-eighth {
+    width: 12.5%; }
+
+  .portable--three-eighths {
+    width: 37.5%; }
+
+  .portable--five-eighths {
+    width: 62.5%; }
+
+  .portable--seven-eighths {
+    width: 87.5%; }
+
+  /**
+   * Tenths
+   */
+  .portable--one-tenth {
+    width: 10%; }
+
+  .portable--three-tenths {
+    width: 30%; }
+
+  .portable--seven-tenths {
+    width: 70%; }
+
+  .portable--nine-tenths {
+    width: 90%; }
+
+  /**
+   * Twelfths
+   */
+  .portable--one-twelfth {
+    width: 8.333%; }
+
+  .portable--five-twelfths {
+    width: 41.666%; }
+
+  .portable--seven-twelfths {
+    width: 58.333%; }
+
+  .portable--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  /**
+   * Whole
+   */
+  .desk--one-whole {
+    width: 100%; }
+
+  /**
+   * Halves
+   */
+  .desk--one-half, .desk--two-quarters, .desk--three-sixths, .desk--four-eighths, .desk--five-tenths, .desk--six-twelfths {
+    width: 50%; }
+
+  /**
+   * Thirds
+   */
+  .desk--one-third, .desk--two-sixths, .desk--four-twelfths {
+    width: 33.333%; }
+
+  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+    width: 66.666%; }
+
+  /**
+   * Quarters
+   */
+  .desk--one-quarter, .desk--two-eighths, .desk--three-twelfths {
+    width: 25%; }
+
+  .desk--three-quarters, .desk--six-eighths, .desk--nine-twelfths {
+    width: 75%; }
+
+  /**
+   * Fifths
+   */
+  .desk--one-fifth, .desk--two-tenths {
+    width: 20%; }
+
+  .desk--two-fifths, .desk--four-tenths {
+    width: 40%; }
+
+  .desk--three-fifths, .desk--six-tenths {
+    width: 60%; }
+
+  .desk--four-fifths, .desk--eight-tenths {
+    width: 80%; }
+
+  /**
+   * Sixths
+   */
+  .desk--one-sixth, .desk--two-twelfths {
+    width: 16.666%; }
+
+  .desk--five-sixths, .desk--ten-twelfths {
+    width: 83.333%; }
+
+  /**
+   * Eighths
+   */
+  .desk--one-eighth {
+    width: 12.5%; }
+
+  .desk--three-eighths {
+    width: 37.5%; }
+
+  .desk--five-eighths {
+    width: 62.5%; }
+
+  .desk--seven-eighths {
+    width: 87.5%; }
+
+  /**
+   * Tenths
+   */
+  .desk--one-tenth {
+    width: 10%; }
+
+  .desk--three-tenths {
+    width: 30%; }
+
+  .desk--seven-tenths {
+    width: 70%; }
+
+  .desk--nine-tenths {
+    width: 90%; }
+
+  /**
+   * Twelfths
+   */
+  .desk--one-twelfth {
+    width: 8.333%; }
+
+  .desk--five-twelfths {
+    width: 41.666%; }
+
+  .desk--seven-twelfths {
+    width: 58.333%; }
+
+  .desk--eleven-twelfths {
+    width: 91.666%; } }
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+/*------------------------------------*\
+    $COLUMNS
+\*------------------------------------*/
+/**
+ * Here we can set elements in columns of text using CSS3, e.g.:
+ *
+   <p class=text-cols--2>
+ *
+ * Demo: jsfiddle.net/inuitcss/E26Yd
+ *
+ */
+.text-cols--2, .text-cols--3, .text-cols--4, .text-cols--5 {
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  -ms-column-gap: 24px;
+  -o-column-gap: 24px;
+  column-gap: 24px; }
+
+.text-cols--2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2; }
+
+.text-cols--3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3; }
+
+.text-cols--4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  -o-column-count: 4;
+  column-count: 4; }
+
+.text-cols--5 {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  -ms-column-count: 5;
+  -o-column-count: 5;
+  column-count: 5; }
+
+/*------------------------------------*\
+    $BEAUTONS.CSS
+\*------------------------------------*/
+/**
+ * beautons is a beautifully simple button toolkit.
+ *
+ * LICENSE
+ *
+ * Copyright 2013 Harry Roberts
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+/*!*
+ *
+ * @csswizardry -- csswizardry.com/beautons
+ *
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 3;
+  /* [7] */
+  padding-right: 30px;
+  /* [7] */
+  padding-left: 30px;
+  /* [7] */
+  border-radius: 2px;
+  /* [8] */ }
+
+.btn, .btn:hover {
+  text-decoration: none;
+  /* [9] */ }
+.btn:active, .btn:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small {
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 2; }
+
+.btn--large {
+  padding-right: 45px;
+  padding-left: 45px;
+  line-height: 4; }
+
+.btn--huge {
+  padding-right: 2em;
+  padding-left: 2em;
+  line-height: 5; }
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full {
+  width: 100%;
+  padding-right: 0;
+  /* [1] */
+  padding-left: 0;
+  /* [1] */
+  text-align: center; }
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+.btn--alpha {
+  font-size: 3rem; }
+
+.btn--beta {
+  font-size: 2rem; }
+
+.btn--gamma {
+  font-size: 1rem; }
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Button function modifiers.
+ */
+.btn--primary {
+  background: #0076A2;
+  color: #fff; }
+  .btn--primary:hover {
+    background: #006389; }
+  .btn--primary:focus, .btn--primary:active {
+    background: #00516f; }
+
+.btn--secondary {
+  background: none;
+  color: #26292A;
+  border: 1px solid #d5d5d5; }
+  .btn--secondary:hover {
+    border: 1px solid #0076A2; }
+  .btn--secondary:focus, .btn--secondary:active {
+    background: #F5F5F5; }
+
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+.btn--positive {
+  background-color: #4A993E;
+  color: #fff; }
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+.btn--negative {
+  background-color: #b33630;
+  color: #fff; }
+
+/**
+ * Inactive, disabled buttons.
+ *
+ * 1. Make the button look like normal text when hovered.
+ */
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus {
+  background-color: #d5d5d5;
+  color: #aaa;
+  cursor: text;
+  /* [1] */ }
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+/**
+ * Button style modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+.btn--soft {
+  border-radius: 200px;
+  /* [1] */ }
+
+.btn--hard {
+  border-radius: 0; }
+
+/**
+ * Style trumps; helper and brand classes
+ */
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+* Whole
+*/
+.one-whole {
+  width: 100%; }
+
+/**
+* Halves
+*/
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+/**
+* Quarters
+*/
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+/**
+* Fifths
+*/
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+/**
+* Sixths
+*/
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+/**
+* Eighths
+*/
+.one-eighth {
+  width: 12.5%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+* Tenths
+*/
+.one-tenth {
+  width: 10%; }
+
+.three-tenths {
+  width: 30%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.nine-tenths {
+  width: 90%; }
+
+/**
+* Twelfths
+*/
+.one-twelfth {
+  width: 8.333%; }
+
+.five-twelfths {
+  width: 41.666%; }
+
+.seven-twelfths {
+  width: 58.333%; }
+
+.eleven-twelfths {
+  width: 91.666%; }
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+@media only screen and (max-width: 480px) {
+  /**
+  * Whole
+  */
+  .palm-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
+    width: 33.333%; }
+
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25%; }
+
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20%; }
+
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40%; }
+
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60%; }
+
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.666%; }
+
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .palm-one-eighth {
+    width: 12.5%; }
+
+  .palm-three-eighths {
+    width: 37.5%; }
+
+  .palm-five-eighths {
+    width: 62.5%; }
+
+  .palm-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .palm-one-tenth {
+    width: 10%; }
+
+  .palm-three-tenths {
+    width: 30%; }
+
+  .palm-seven-tenths {
+    width: 70%; }
+
+  .palm-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .palm-one-twelfth {
+    width: 8.333%; }
+
+  .palm-five-twelfths {
+    width: 41.666%; }
+
+  .palm-seven-twelfths {
+    width: 58.333%; }
+
+  .palm-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+  * Whole
+  */
+  .lap-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+    width: 33.333%; }
+
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
+    width: 25%; }
+
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20%; }
+
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40%; }
+
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60%; }
+
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.666%; }
+
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .lap-one-eighth {
+    width: 12.5%; }
+
+  .lap-three-eighths {
+    width: 37.5%; }
+
+  .lap-five-eighths {
+    width: 62.5%; }
+
+  .lap-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .lap-one-tenth {
+    width: 10%; }
+
+  .lap-three-tenths {
+    width: 30%; }
+
+  .lap-seven-tenths {
+    width: 70%; }
+
+  .lap-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .lap-one-twelfth {
+    width: 8.333%; }
+
+  .lap-five-twelfths {
+    width: 41.666%; }
+
+  .lap-seven-twelfths {
+    width: 58.333%; }
+
+  .lap-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) {
+  /**
+  * Whole
+  */
+  .lap-and-up-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
+    width: 33.333%; }
+
+  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
+    width: 25%; }
+
+  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
+    width: 20%; }
+
+  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
+    width: 40%; }
+
+  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
+    width: 60%; }
+
+  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
+    width: 16.666%; }
+
+  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .lap-and-up-one-eighth {
+    width: 12.5%; }
+
+  .lap-and-up-three-eighths {
+    width: 37.5%; }
+
+  .lap-and-up-five-eighths {
+    width: 62.5%; }
+
+  .lap-and-up-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .lap-and-up-one-tenth {
+    width: 10%; }
+
+  .lap-and-up-three-tenths {
+    width: 30%; }
+
+  .lap-and-up-seven-tenths {
+    width: 70%; }
+
+  .lap-and-up-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .lap-and-up-one-twelfth {
+    width: 8.333%; }
+
+  .lap-and-up-five-twelfths {
+    width: 41.666%; }
+
+  .lap-and-up-seven-twelfths {
+    width: 58.333%; }
+
+  .lap-and-up-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  /**
+  * Whole
+  */
+  .portable-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+    width: 33.333%; }
+
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25%; }
+
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20%; }
+
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40%; }
+
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60%; }
+
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.666%; }
+
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .portable-one-eighth {
+    width: 12.5%; }
+
+  .portable-three-eighths {
+    width: 37.5%; }
+
+  .portable-five-eighths {
+    width: 62.5%; }
+
+  .portable-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .portable-one-tenth {
+    width: 10%; }
+
+  .portable-three-tenths {
+    width: 30%; }
+
+  .portable-seven-tenths {
+    width: 70%; }
+
+  .portable-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .portable-one-twelfth {
+    width: 8.333%; }
+
+  .portable-five-twelfths {
+    width: 41.666%; }
+
+  .portable-seven-twelfths {
+    width: 58.333%; }
+
+  .portable-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  /**
+  * Whole
+  */
+  .desk-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+    width: 33.333%; }
+
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25%; }
+
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .desk-one-fifth, .desk-two-tenths {
+    width: 20%; }
+
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40%; }
+
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60%; }
+
+  .desk-four-fifths, .desk-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.666%; }
+
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .desk-one-eighth {
+    width: 12.5%; }
+
+  .desk-three-eighths {
+    width: 37.5%; }
+
+  .desk-five-eighths {
+    width: 62.5%; }
+
+  .desk-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .desk-one-tenth {
+    width: 10%; }
+
+  .desk-three-tenths {
+    width: 30%; }
+
+  .desk-seven-tenths {
+    width: 70%; }
+
+  .desk-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .desk-one-twelfth {
+    width: 8.333%; }
+
+  .desk-five-twelfths {
+    width: 41.666%; }
+
+  .desk-seven-twelfths {
+    width: 58.333%; }
+
+  .desk-eleven-twelfths {
+    width: 91.666%; } }
+/**
+ * If you have set the additional `$responsive-extra` variable to ‘true’ in
+ * `_vars.scss` then you now have access to the following class available to
+ * accomodate much larger screen resolutions.
+ */
+/* endif */
+/**
+* UI
+*/
+.header--main {
+  margin-top: 0px;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #E1E6E8;
+  width: 100%;
+  height: 100px; }
+.header__logo {
+  background: url("../gfx/yr-logo.svg") no-repeat;
+  display: block;
+  float: left;
+  height: 50px;
+  width: 50px;
+  line-height: 1000px;
+  overflow: hidden; }
+
+.main {
+  padding-bottom: 45px; }
+
+.footer {
+  padding: 45px 15px; }
+
+.header-place {
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0 7px 0; }
+  .header-place__title {
+    margin-bottom: 7px;
+    font-size: 27px;
+    font-weight: normal; }
+  .header-place__metadata {
+    margin-bottom: 15px; }
+  .header-place__location {
+    font-style: italic;
+    color: #686A6C; }
+  .header-place__elevation {
+    font-style: italic;
+    color: #686A6C; }
+  .header-place__list {
+    margin: 0;
+    padding: 0; }
+  .header-place__list-item {
+    list-style-type: none;
+    display: inline; }
+  .header-place__list-link {
+    color: #26292A;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0 3.5px 3.5px 3.5px; }
+    .header-place__list-link--current {
+      border-bottom: 2px solid #0076A2;
+      font-weight: bold;
+      color: #0076A2; }
+
+.places {
+  padding: 15px 0; }
+  .places__title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 19px;
+    margin-bottom: 0; }
+
+.place-list {
+  margin: 0;
+  padding: 0; }
+  .place-list__title {
+    font-size: 16px;
+    color: #26292A;
+    margin: 0; }
+  .place-list__date {
+    font-size: 16px;
+    font-weight: normal;
+    color: #686A6C; }
+  .place-list__item {
+    list-style-type: none; }
+  .place-list__link {
+    position: relative;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    height: 126px;
+    display: block;
+    background: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 3.5px 0; }
+  .place-list__weatherlist {
+    margin: -8px 0 0 0;
+    padding: 0; }
+  .place-list__weatherlist-item {
+    list-style-type: none;
+    text-align: right; }
+  .place-list__weatherlist-temperature {
+    font-size: 23px;
+    color: #C60000; }
+  .place-list__weatherlist-rain {
+    color: #0062BF; }
+  .place-list__weatherlist-wind {
+    color: #686A6C; }
+  .place-list__weatherlist-degree {
+    color: #C60000; }
+  .place-list__weatherlist-slash {
+    font-size: 23px;
+    color: #d5d5d5; }
+  .place-list__image {
+    position: absolute;
+    bottom: 15px;
+    width: 266px; }
+    .place-list__image--large {
+      width: 345px; }
+
+.text-input {
+  padding: 7px;
+  border-radius: 2px;
+  border: 1px solid #d5d5d5; }
+  .text-input--large {
+    padding: 15px; }
+  .text-input:focus {
+    border: 1px solid #00B9F1;
+    background: #fff; }
+
+::-webkit-input-placeholder {
+  color: #959595; }
+
+.search {
+  position: relative;
+  float: right;
+  display: block;
+  width: 80%; }
+  .search__input {
+    width: 100%;
+    background: #F5F5F5;
+    border: 1px solid #E1E6E8;
+    border-radius: 2px;
+    padding-left: 15px;
+    height: 50px;
+    box-shadow: none; }
+    .search__input:hover {
+      background: #fff; }
+      .search__input:hover + label .search-icon {
+        color: white; }
+    .search__input:focus {
+      transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+      border: 1px solid #0076A2;
+      outline: none;
+      box-shadow: none;
+      cursor: text;
+      border-radius: auto;
+      background: #fff;
+      color: black; }
+      .search__input:focus + label .search-icon {
+        color: black; }
+  .search__button {
+    display: none;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    border: none;
+    line-height: 1000;
+    overflow: hidden;
+    background: transparent; }
+  .search__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../gfx/icon-search.svg") no-repeat center;
+    width: 50px;
+    height: 50px; }
+
+/**
+* Styleguide
+*/
+.wrapper {
+  padding: 15px; }
+
+.styleguide__module {
+  background: #fff;
+  padding: 90px 45px;
+  margin: 15px;
+  border: 1px solid #e8e8e8; }
+.styleguide__title {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2E3D42;
+  margin-bottom: 90px; }
+.styleguide__element {
+  margin-bottom: 45px; }
+.styleguide__subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  margin: 7px 0; }
+.styleguide__value {
+  font-size: 14px;
+  text-align: center;
+  color: #686A6C;
+  margin: 7px 0; }
+  .styleguide__value--left {
+    text-align: left; }
+
+.swatch__color {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+  margin: 0 auto; }
+  .swatch__color--swatch1 {
+    background: #00B9F1; }
+  .swatch__color--swatch2 {
+    background: #0076A2; }
+  .swatch__color--swatch3 {
+    background: #26292A; }
+  .swatch__color--swatch4 {
+    background: #686A6C; }
+  .swatch__color--swatch5 {
+    background: #404D53; }
+  .swatch__color--swatch6 {
+    background: #F5F5F5; }
+  .swatch__color--swatch7 {
+    background: #C60000; }
+  .swatch__color--swatch8 {
+    background: #0062BF; }
+  .swatch__color--swatch9 {
+    background: #9B009B; }
+
+/*# sourceMappingURL=main.css.map */

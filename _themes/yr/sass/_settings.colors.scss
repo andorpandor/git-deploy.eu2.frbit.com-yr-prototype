@@ -1,0 +1,29 @@
+// Yr colors
+
+// Ui colors
+
+$white:         #fff;
+$grey:          #d5d5d5;
+$grey--bg:      #EAECED;
+$grey--light:   #F5F5F5;
+$grey--semilight: #E3E5E6;
+$grey--mediumlight: #AAAAAA;
+
+$grey--medium:  #959595;
+
+$grey--dark:    #2D383B;
+$grey--darker:  #21292B;
+
+$text--dark:    darken($grey--dark,8%);
+$text--light :  #686A6C;
+$blue:          #0076A2;
+$blue--light:   #00B9F1;
+$blue--dark:    #007DA3;
+
+$border--light: #E1E6E8;
+
+// weather colors
+$temp-plus:     #C60000;
+$temp-minus:    #0062BF;
+$wind-breeze:   #f5843e;
+$wind-storm:    #9B009B;

@@ -1,0 +1,59 @@
+// Footer styles
+
+.footer{
+    padding: $spacing--lg $spacing--sm $spacing--sm $spacing--sm;
+    background: $white;
+    border-top: 1px solid $grey--semilight;
+    &__list{
+      list-style-type: none;
+      margin: 0 0 $spacing--lg 0;
+      padding: 0;
+      text-align: center;
+    }
+    &__list-item{
+      padding: $spacing--xs;
+    }
+    &__list-link{
+      color: $text--dark;
+      text-decoration: none;
+      border-bottom: 1px solid $grey;
+    }
+    &__logolist{
+      text-align: center;
+      margin: 0 0 $spacing--sm 0;
+      padding: 0;
+    }
+    &__logolist-item{
+      display: inline-block;
+      list-style-type: none;
+      padding: 0 $spacing--sm;
+    }
+    &__logolist-logo{
+      width: 120px;
+      height: 40px;
+      overflow: hidden;
+      display: block;
+      line-height: 1000px;
+      &--nrk{
+        background-image: url("../gfx/logo-nrk.svg");
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center 6px;
+      }
+      &--met{
+        background: url("../gfx/logo-met.svg") no-repeat;
+      }
+    }
+    &__foot{
+      text-align: center;
+      font-size: $h6-size;
+      color: $text--light;
+    }
+    &__foot-list{
+      list-style-type: none;
+      margin: 0 0 $spacing--xs 0;
+    }
+    &__foot-text{
+      margin-bottom: $spacing--xs;
+    }
+}

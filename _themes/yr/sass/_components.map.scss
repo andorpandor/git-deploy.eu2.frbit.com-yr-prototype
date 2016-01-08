@@ -1,0 +1,75 @@
+// Map styles
+
+.map{
+  &__title{
+    display: block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 22px;
+    line-height: 1000px;
+    background: url("../gfx/yr-logo.svg") no-repeat $blue--light;
+    @include shadow;
+    &:hover{
+      background: url("../gfx/yr-logo.svg") no-repeat $blue;
+    }
+  }
+  &__close{
+    background: $grey--dark;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: url("../gfx/icon-close.svg") $grey--dark;
+    overflow: hidden;
+    line-height: 1000px;
+    @include shadow;
+    &:hover{
+      background: url("../gfx/icon-close.svg") $blue;
+    }
+  }
+  &__graphic{
+    background-image: url("../img/kart.jpg");
+    background-size: contain;
+    background-position: top;
+    width: 375px;
+    height: 1334px;
+  }
+}
+
+
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity:0;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+
+	position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.update{
+  font-size: $h6-size;
+  margin: $spacing--sm 0;
+  text-align: center;
+  color: $text--light;
+}

@@ -1,0 +1,30 @@
+
+<div class="tabs tabs-style-bar">
+
+	<nav class="tab header-place__nav">
+		<a href="#section-bar-1" class="js_tab"><span class="header-place__list-link">Liste</span></a>
+		<a href="#section-bar-2" class="js_tab header-place__list-link"><span class="header-place__list-link">Graf</span></a>
+		<a href="#openModal" class="header-place__list-link">Nedbørskart</a>
+	</nav>
+
+
+
+
+	<div class="content-wrap">
+		<section id="section-bar-1">
+			{{ theme:partial src="place-tips" }}
+			{{ theme:partial src="place-list" }}
+		</section>
+		<section id="section-bar-2">
+			{{ theme:partial src="place-tips" }}
+			{{ theme:partial src="place-graph" }}
+		</section>
+	</div><!-- /content -->
+</div><!-- /tabs -->
+
+
+<div id="openModal" class="modalDialog">
+	<div class="map__graphic">
+		<a href="#close" title="Close" class="close map__close">X</a>
+		<h2 class="map__title">Yr Kart</h2>
+</div>

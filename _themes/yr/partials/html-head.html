@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <title>
+    {{ _site_name }}
+    {{ if segment_1 }}
+    – {{ title }}
+    {{ endif }}
+  </title>
+
+  <!-- styles -->
+  {{ theme:css src="arrange" tag="true" }}
+  {{ theme:css src="animate.min" tag="true" }}
+
+  {{ theme:css tag="true" }}
+
+
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.png" }}">
+</head>

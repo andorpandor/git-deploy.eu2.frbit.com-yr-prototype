@@ -1,0 +1,124 @@
+<ul class="place-list">
+    <a class="place-list__link place-list__link--large" href="404.html">
+        <li class="place-list__item">
+
+            <div class="place-list__head">
+              <h3 class="place-list__title">Nå</h3>
+
+              <div class="place-list__head-values">
+                <div class="place-list__head-value place-list__head-value--temp">
+                  6º
+                </div>
+                <div class="place-list__head-value place-list__head-value--symbol">
+                  6º
+                </div>
+                <div class="place-list__head-value">
+                  <p class="place-list__head-value--other"><span class="place-list__weatherlist-rain">0,5 mm</span><br /><span class="place-list__weatherlist-wind">11 m/s</span></p>
+                </div>
+              </div>
+              <p class="place-list__headtext">Lettskyet, kraftig vind fra sør</p>
+            </div>
+
+
+            <div class="place-list__foot">
+              <div class="grid">
+              <div class="grid__item one-half">
+                <h3 class="place-list__title">I dag <span class="place-list__date">19. Sept.</span></h3>
+
+
+              </div><!--
+           --><div class="grid__item one-half">
+
+              <ul class="place-list__weatherlist">
+                <li class="place-list__weatherlist-item"><span class="place-list__weatherlist-rain">3 mm</span></li>
+                <li class="place-list__weatherlist-item"><span class="place-list__weatherlist-wind">4 m/s</span></li>
+                <li class="place-list__weatherlist-item"><p><span class="place-list__weatherlist-temperature">4</span><span class="place-list__weatherlist-degree"><sup>º</sup></span><span class="place-list__weatherlist-slash">/</span><span class="place-list__weatherlist-temperature">9</span><span class="place-list__weatherlist-degree"><sup>º</sup></span></span></p></li>
+              </ul>
+
+              </div><!--
+           -->
+          </div>
+
+          <ol class="place-list__list">
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">06</h3>
+              <figure class="place-list__symbol place-list__symbol--01">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">12</h3>
+              <figure class="place-list__symbol place-list__symbol--02">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">18</h3>
+              <figure class="place-list__symbol place-list__symbol--03">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">00</h3>
+              <figure class="place-list__symbol place-list__symbol--04">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">06</h3>
+            </li>
+          </ol>
+            </div>
+        </li>
+    </a>
+
+</ul>
+
+
+
+
+<ul class="place-list">
+    {{ entries:listing folder="*" sort_dir="asc" }}
+    <a class="place-list__link" href="404.html">
+        <li class="place-list__item">
+          <div class="place-list__foot">
+
+
+          <div class="grid">
+              <div class="grid__item one-half">
+                <h3 class="place-list__title">{{ title }} <span class="place-list__date">{{ date-short }}</span></h3>
+
+
+              </div><!--
+           --><div class="grid__item one-half">
+
+              <ul class="place-list__weatherlist">
+                <li class="place-list__weatherlist-item"><span class="place-list__weatherlist-rain">{{ rain }}</span></li>
+                <li class="place-list__weatherlist-item"><span class="place-list__weatherlist-wind">{{ wind }}</span></li>
+                <li class="place-list__weatherlist-item"><p><span class="place-list__weatherlist-temperature">{{ temperaturemin }}</span><span class="place-list__weatherlist-degree"><sup>º</sup></span><span class="place-list__weatherlist-slash">/</span><span class="place-list__weatherlist-temperature">{{ temperaturemax }}</span><span class="place-list__weatherlist-degree"><sup>º</sup></span></span></p></li>
+              </ul>
+
+              </div><!--
+           -->
+          </div>
+
+          <ol class="place-list__list">
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">06</h3>
+              <figure class="place-list__symbol place-list__symbol--01">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">12</h3>
+              <figure class="place-list__symbol place-list__symbol--02">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">18</h3>
+              <figure class="place-list__symbol place-list__symbol--03">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">00</h3>
+              <figure class="place-list__symbol place-list__symbol--04">Symbol</figure>
+            </li>
+            <li class="place-list__list-item">
+              <h3 class="place-list__timestamp">06</h3>
+            </li>
+          </ol>
+</div>
+<!--          <img src="{{ _site_root }}_themes/yr/img/weather-day.png" class="place-list__image" />  -->
+
+        </li>
+    </a>
+    {{ /entries:listing }}
+</ul>

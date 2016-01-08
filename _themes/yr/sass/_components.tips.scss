@@ -1,0 +1,16 @@
+// Tips styles
+
+.tips{
+  background: $blue--light;
+  padding: $spacing--sm;
+  display: block;
+  margin-bottom: $spacing--xs;
+  &__text{
+    text-align: center;
+    margin: 0;
+    &--strong{
+      font-weight: bold;
+    }
+
+  }
+}

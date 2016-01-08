@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	{{ theme:partial src="html-head" }}
+
+	<body id="top">
+		<div class="page">
+			{{ theme:partial src="header" }}
+
+				<div id="contentAnchor" class="main" role="main">
+
+
+
+
+
+
+
+					{{ layout_content }}
+				</div>
+			</div>
+			{{ theme:partial src="footer" }}
+		</div>
+		{{ location:start_maps smart_include="true" }}
+	</body>
+
+	{{ theme:partial src="html-foot" }}
+
+</html>

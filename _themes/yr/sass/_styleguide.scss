@@ -1,0 +1,78 @@
+// Main styles
+
+.wrapper{
+  padding: $spacing--sm; //move this!!
+}
+
+.styleguide{
+  &__module{
+    background: $white;
+    padding: $spacing--lg*2 $spacing--lg;
+    margin: $spacing--sm;
+    border: 1px solid darken($grey--light, 5%);
+  }
+  &__title{
+    text-align: center;
+    font-size: $h6-size;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $grey--dark;
+    margin-bottom: $spacing--lg*2;
+  }
+  &__element{
+    margin-bottom: $spacing--lg;
+  }
+  &__subtitle{
+      font-size: $h6-size;
+      font-weight: normal;
+      text-align: center;
+      margin: $spacing--xs 0;
+    }
+    &__value{
+      font-size: $h6-size;
+      text-align: center;
+      color: $text--light;
+      margin: $spacing--xs 0;
+      &--left{
+        text-align: left;
+      }
+    }
+}
+
+.swatch{
+  &__color{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  &--swatch1{
+    background: $blue--light;
+  }
+  &--swatch2{
+    background: $blue;
+  }
+  &--swatch3{
+    background: $text--dark;
+  }
+  &--swatch4{
+    background: $text--light;
+  }
+  &--swatch5{
+    background: $blue--dark;
+  }
+  &--swatch6{
+    background: $grey--light;
+  }
+  &--swatch7{
+    background: $temp-plus;
+  }
+  &--swatch8{
+    background: $temp-minus;
+  }
+  &--swatch9{
+    background: $wind-storm;
+  }
+  }
+}

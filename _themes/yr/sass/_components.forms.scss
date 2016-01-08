@@ -1,0 +1,14 @@
+// Form styles
+
+.text-input{
+  padding: $spacing--xs;
+  border-radius: $brand-round;
+  border: 1px solid $grey;
+  &--large{
+    padding: $spacing--sm;
+  }
+  &:focus{
+    border: 1px solid $blue--light;
+    background: $white;
+  }
+}

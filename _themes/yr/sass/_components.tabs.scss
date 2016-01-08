@@ -1,0 +1,67 @@
+/* Default tab style */
+
+
+.tabs {
+
+}
+
+
+
+/* Nav */
+.tabs nav {
+}
+
+.tabs nav ul {
+
+}
+
+.tabs nav ul li {
+
+}
+
+.tabs nav a {
+	padding: $spacing--sm*1.2;
+	}
+
+
+
+.tabs nav a.tab-current {
+	color: $blue--light !important;
+	text-decoration: none;
+//	border-bottom: 3px solid $blue--light;
+//	padding-bottom: 7px;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+
+/* Content */
+.content-wrap {
+	position: relative;
+}
+
+.content-wrap section {
+	display: none;
+}
+
+.content-wrap section.content-current {
+	display: block;
+}
+
+
+/* Fallback */
+.no-js .content-wrap section {
+	display: block;
+	padding-bottom: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.no-flexbox nav ul {
+	display: block;
+}
+
+.no-flexbox nav ul li {
+	min-width: 15%;
+	display: inline-block;
+}

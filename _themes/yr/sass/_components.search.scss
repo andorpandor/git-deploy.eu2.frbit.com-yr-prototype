@@ -1,0 +1,103 @@
+// Search styles
+
+.test{
+  &__input{
+    background: red;
+    width: 50%;
+    &:focus{
+      width: 100%;
+      transition: width 0.1s ease;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color:$grey--medium;
+}
+
+
+.search{
+  &__input{
+    position: absolute;
+    left: 76px;
+    width: 283px;
+    background: $grey--light;
+    border: 1px solid $grey;
+    border-radius: $radius;
+    padding-left: $spacing--xs;
+    height: 44px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    &:hover {
+    background: $white;
+    border: 1px solid $grey;
+    & + label .search-icon {    color: white    }
+    }
+    &:focus{
+      transition: width 0.1s ease;
+      width: 343px;
+      left: $spacing--sm;
+    }
+  &:focus {
+    border: 1px solid $grey--dark;
+    outline: none;
+    box-shadow: none;
+    cursor: text;
+    border-radius: auto;
+    background: $white;
+    color: black;
+    & + label .search-icon {    color: black;    }
+  }
+//  &:not(:focus) {    text-indent:-5000px;    } // for more-graceful falling back (:not browsers likely support indent)
+  }
+
+  &__button{
+    display: none;
+    position: absolute;
+    right: -$spacing--md;
+    top: -10px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    line-height: 1000;
+    overflow: hidden;
+    background: transparent;
+  }
+  &__icon{
+    position: relative;
+    right: 0;
+    top: -4px;
+    background: url("../gfx/icon-search.svg") no-repeat center;
+    width: 50px;
+    height: 50px;
+
+  }
+  &__geolocation{
+    display: none;
+    position: absolute;
+    width: 343px;
+    top: 83px;
+    background: $grey--dark;
+    color: $white;
+    padding: 10px $spacing--xs;
+    z-index: 99;
+    overflow: visible;
+    @include shadow;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+  &__geolocation-link{
+    color: $text--dark;
+    text-decoration: none;
+    font-weight: bold;
+    color: $white;
+    &:before{
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $spacing--xs/2;
+      width: 30px;
+      height: 30px;
+      background: url("../gfx/icon-geo.svg") no-repeat center;    }
+  }
+}

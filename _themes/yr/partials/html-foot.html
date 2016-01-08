@@ -1,0 +1,46 @@
+
+  <!-- javascript -->
+  <script src="{{ theme:js src="main.js" }}"></script>
+  <script src="{{ theme:js src="classie.js" }}"></script>
+  <script src="{{ theme:js src="cbpFWTabs.js" }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+  <script>
+    (function() {
+
+      [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+        new CBPFWTabs( el );
+      });
+
+    })();
+  </script>
+
+
+  <script>
+  var mouse_is_inside = false;
+
+  $(document).ready(function()
+  {
+      $('.form_content').hover(function(){
+          mouse_is_inside=true;
+      }, function(){
+          mouse_is_inside=false;
+      });
+
+      $("body").mouseup(function(){
+          if(! mouse_is_inside) $('.search__geolocation').hide();
+      });
+  });
+
+
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".search__geolocation").hide();
+    });
+    $("#show").click(function(){
+        $(".search__geolocation").show();
+    });
+});
+</script>

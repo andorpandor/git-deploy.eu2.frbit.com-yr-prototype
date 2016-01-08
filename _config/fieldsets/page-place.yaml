@@ -1,0 +1,17 @@
+title: Location Page
+
+fields:
+
+  Location:
+    type: text
+    display: Region
+
+  Elevation:
+    type: text
+    display: Meter over havet
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: markitup

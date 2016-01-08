@@ -1,0 +1,26 @@
+
+
+<section class="homelist">
+<header>
+  <h2 class="homelist__title"><span class="homelist__icon homelist__icon--myplaces"></span>Mine steder<em class="homelist__edit homelist__edit--edit">Rediger mine steder</em></h2>
+</header>
+  {{ nav from="mine-steder" max_depth="2" }}
+  <a class="nav homelist__link" href="{{ url }}" {{ if is_current }} class="current"{{ endif }}>
+        <h3 class="homelist__list-title">{{ title }}</h3>
+        {{ theme:partial src="home-weatherlist-list" }}
+
+  </a>
+  {{ /nav }}
+
+<header>
+  <h2 class="homelist__title"><span class="homelist__icon homelist__icon--last"></span>Sist besøkte<em class="homelist__edit homelist__edit--delete">Rediger mine steder</em></h2>
+</header>
+{{ nav from="sist-besokte" max_depth="2" }}
+<a class="nav homelist__link" href="{{ url }}" {{ if is_current }} class="current"{{ endif }}>
+      <h3 class="homelist__list-title">{{ title }}</h3>
+      {{ theme:partial src="home-weatherlist-list" }}
+
+</a>
+{{ /nav }}
+
+</section>

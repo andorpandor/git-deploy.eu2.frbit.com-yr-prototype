@@ -1,0 +1,23 @@
+// typography settings
+
+
+
+@mixin font-body{
+//  font-family: "lft-etica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-header{
+//  font-family: "lft-etica", "Helvetica Neue Medium", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+p, li{
+  @include font-body;
+}
+
+h1,h2,h3,h4{
+  @include font-header;
+}

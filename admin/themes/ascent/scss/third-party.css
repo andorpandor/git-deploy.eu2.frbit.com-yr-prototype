@@ -1,0 +1,75 @@
+/*
+Error: Undefined mixin 'gradient'.
+        on line 87 of yr.no/admin/themes/ascent/scss/third-party.scss, in `gradient'
+        from line 87 of yr.no/admin/themes/ascent/scss/third-party.scss
+
+82: .markItUpHeader ul ul {display:none; position:absolute; top:18px; left:0px;  background:#F5F5F5; border:1px solid #3C769D; height:inherit;}
+83: .markItUpHeader ul ul li {float:none;border-bottom:1px solid #3C769D;}
+84: .markItUpHeader ul ul .markItUpDropMenu {background:#F5F5F5 url(../img/submenu.png) no-repeat 100% 50%;}
+85: .markItUpHeader ul ul ul {position:absolute;top:-1px; left:150px;}
+86: .markItUpHeader ul ul ul li {float:none;}
+87: .markItUpHeader ul li {@include gradient(#fff, #efefef);box-shadow:0px 1px 1px rgba(0,0,0,.2); @include border-radius(2px); border:1px solid #efefef;margin:0px 5px 15px 0;&:hover {background:#fff;border:1px solid rgba(0,0,0,.15);box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);}}
+88: .markItUpHeader ul a {background-position:5px; display:block; width:16px; height:16px; text-indent:-10000px; background-repeat:no-repeat; padding:5px;}
+89: .markItUpHeader ul ul a {display:block; padding-left:0px; text-indent:0; width:120px;  padding:5px 5px 5px 25px; background-position:2px 50%;}
+90: .markItUpHeader ul ul a:hover  {color:#FFF;background-color:#3C769D;}
+91: 
+92: // icons
+
+Backtrace:
+yr.no/admin/themes/ascent/scss/third-party.scss:87:in `gradient'
+yr.no/admin/themes/ascent/scss/third-party.scss:87
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:98:in `block in with_mixin'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:98:in `with_mixin'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:293:in `watch'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin.rb:108:in `method_missing'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:384:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'gradient'.\A         on line 87 of yr.no/admin/themes/ascent/scss/third-party.scss, in `gradient'\A         from line 87 of yr.no/admin/themes/ascent/scss/third-party.scss\A \A 82: .markItUpHeader ul ul {display:none; position:absolute; top:18px; left:0px;  background:#F5F5F5; border:1px solid #3C769D; height:inherit;}\A 83: .markItUpHeader ul ul li {float:none;border-bottom:1px solid #3C769D;}\A 84: .markItUpHeader ul ul .markItUpDropMenu {background:#F5F5F5 url(../img/submenu.png) no-repeat 100% 50%;}\A 85: .markItUpHeader ul ul ul {position:absolute;top:-1px; left:150px;}\A 86: .markItUpHeader ul ul ul li {float:none;}\A 87: .markItUpHeader ul li {@include gradient(#fff, #efefef);box-shadow:0px 1px 1px rgba(0,0,0,.2); @include border-radius(2px); border:1px solid #efefef;margin:0px 5px 15px 0;&:hover {background:#fff;border:1px solid rgba(0,0,0,.15);box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);}}\A 88: .markItUpHeader ul a {background-position:5px; display:block; width:16px; height:16px; text-indent:-10000px; background-repeat:no-repeat; padding:5px;}\A 89: .markItUpHeader ul ul a {display:block; padding-left:0px; text-indent:0; width:120px;  padding:5px 5px 5px 25px; background-position:2px 50%;}\A 90: .markItUpHeader ul ul a:hover  {color:#FFF;background-color:#3C769D;}\A 91: \A 92: // icons"; }
